@@ -1,6 +1,6 @@
 #views.py
 import tkinter as tk
-from tkinter import Button, ttk
+from tkinter import ttk
  
 class librosView():
     def __init__(self, root):
@@ -28,8 +28,6 @@ class librosView():
 #A partir de este punto desarrollar el código incluyendo los widgets restantes, nombrar con el mismo criterio que se utilizó para Id y Autor
  
 #Añadir un frame2 sin border ni relief y el sticky en todas las direcciones.
-        self.frame2 = ttk.Frame(self.root)
-        self.frame2.grid(padx=5, pady=5, row=0, column=0, sticky=tk.N+tk.S+tk.E+tk.W)
  
 #Aplicamos estilos y los modificamos para la cabecera del treeview.
         self.style = ttk.Style(self.root)
@@ -52,22 +50,13 @@ class librosView():
         scrollbar.grid(row=0, column=1, sticky='ns')
  
 #Añadir un frame3 sin border ni relief.
-        self.frame3 = ttk.Frame(self.root)
-        self.frame3.grid(padx=5, pady=5, row=0, column=0, sticky=tk.N+tk.S+tk.E+tk.W)
         self.buttonAdd = ttk.Button(self.frame3, text='Añadir')
         self.buttonAdd.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
-        self.buttonUpdate = ttk.Button(self.frame3,text='Actualizar')
-        self.buttonUpdate.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
-        self.buttonRemove = ttk.Button(self.frame3, text='Remover')
-        self.buttonRemove.pack(side=tk.LEFT, padx=5, pady=5, fill=tk.X, expand=True)
-        self.buttonLimpiar = ttk.Button(self.frame3, text='Limpiar')
-        self.buttonLimpiar.pack['command'] = self.limpiar
-
  
 #Dentro del frame3 se incluyen los botones restantes como buttonUpdate, buttonRemove y buttonLimpiar.
  
 #En el buttom limpiar agregar el command limpiar
-        #self.buttonLimpiar['command'] = self.limpiar
+        self.buttonLimpiar['command'] = self.limpiar
 #----------------------------------------------------------------------
  
         self.frame4 = ttk.Frame(self.root, border=1, relief='groove')
