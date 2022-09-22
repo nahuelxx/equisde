@@ -1,7 +1,5 @@
 #models.py
-from msilib import Table
-from msilib.schema import tables
-import dbConn
+from dbConn import dbConn
  
 class librosModel():
     def __init__(self):
